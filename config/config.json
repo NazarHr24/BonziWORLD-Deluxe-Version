@@ -1,0 +1,14 @@
+{
+  "port":3000,
+  "godword":"NazarTheCoolHuman1234567890",
+  "cogodword":"Swagfrenzythecoolest5634345345",
+  "popeword":"mepope",
+  "lowkingword":"free",
+  "highkingword":"free",
+  "altlimit": 3,
+  "slowmode": 400,
+  "namelimit": 100,
+  "altslowmode": 10000,
+  "charlimit": 5000,
+  "spamlimit": 3
+}
