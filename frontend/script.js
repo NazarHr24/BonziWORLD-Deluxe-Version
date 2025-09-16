@@ -755,12 +755,12 @@ var _createClass = (function () {
                                                 socket.emit("talk", { text: d.userPublic.name + " stop being a pastule" });
                                             },
                                         },
-                                        nigger: {
-                                            name: "Niggerify",
+                                        retard: {
+                                            name: "call fune retard",
                                             callback: function () {
                                                 socket.emit("talk", { text: d.userPublic.name + " WANNA HEAR SOMETHING?" })
                                                 setTimeout(() => {
-                                                    socket.emit("command", { list: ["nigger", ""] })
+                                                    socket.emit("command", { list: ["call fune retard", ""] })
                                                 }, 2000)
                                             }
                                         },
@@ -1259,7 +1259,7 @@ var _createClass = (function () {
 		{
                     key: "bass",
                     value: function (a) {
-                        this.runSingleEvent([{ type: "text", text: "Hey, " + a + "!" }, { type: "text", text: "You're a fucking bass!", say: "your a fucking bass!" }, { type: "anim", anim: "beat_fwd", ticks: 15 }, { type: "idle" }]);
+                        this.runSingleEvent([{ type: "text", text: "Hey, " + a + "!" }, { type: "text", text: "You're a fucking bass!", say: "your a fucking bass!" }, { type: "anim", anim: "grin_fwd", ticks: 15 }, { type: "idle" }]);
                     },
                 },
                 {

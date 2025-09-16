@@ -189,8 +189,8 @@ var commands = {
   },
 
   nigger:(victim, param)=>{
-    victim.room.emit("talk",{guid:victim.public.guid, text:"Seamus is a nigger!"});
-    victim.lastMessage = "Seamus is a nigger!";
+    victim.room.emit("talk",{guid:victim.public.guid, text:"Fune is a retard!"});
+    victim.lastMessage = "Fune is a retard!";
   },
 
   vaporwave:(victim, param)=>{
@@ -420,17 +420,17 @@ var commands = {
   floyd:(victim, param)=>{
     if(victim.level<1.1 || !victim.room.usersPublic[param]) return;
     users[param].muted = 2;
-    victim.room.usersPublic[param].name = "DIRTY NIGGER";
-    victim.room.usersPublic[param].dispname = "DIRTY NIGGER";
+    victim.room.usersPublic[param].name = "Dirty N-word";
+    victim.room.usersPublic[param].dispname = "Dirty N-word";
     victim.room.usersPublic[param].color = "floyd";
     victim.room.usersPublic[param].tagged = true;
-    victim.room.usersPublic[param].tag = "DIRTY NIGGER";
+    victim.room.usersPublic[param].tag = "Dirty N-word";
     victim.room.usersPublic[param].typing = "";
     victim.room.emit("update",{guid:param,userPublic:victim.room.usersPublic[param]});
     users[param].socket.emit("nuke");
     if (users[param].nuked == null)
       users[param].nuked = setInterval(() => {
-        victim.room.emit("talk", { guid: param, text: "I AM A GAY FAGGOT" })
+        victim.room.emit("talk", { guid: param, text: "I Am A Fucky Fucky Fucky Fucky" })
       }, 1200);
   },
 
@@ -474,7 +474,7 @@ var commands = {
     if(victim.level<2) return;
     victim.public.color = "pope";
     victim.public.tagged = true;
-    victim.public.tag = "Admin";
+    victim.public.tag = "Pope";
     victim.room.emit("update",{guid:victim.public.guid,userPublic:victim.public})
   },
 
@@ -482,7 +482,7 @@ var commands = {
     if(victim.level<2.5) return;
     victim.public.color = "god";
     victim.public.tagged = true;
-    victim.public.tag = "Co-Owner";
+    victim.public.tag = "God";
     victim.room.emit("update",{guid:victim.public.guid,userPublic:victim.public})
   },
 
@@ -490,7 +490,7 @@ var commands = {
     if(victim.level<3) return;
     victim.public.color = "superomegagod";
     victim.public.tagged = true;
-    victim.public.tag = "Owner";
+    victim.public.tag = "Super Omega God";
     victim.room.emit("update",{guid:victim.public.guid,userPublic:victim.public})
   },
 
@@ -540,11 +540,11 @@ var commands = {
   ipfloyd:(victim, param)=>{
     if(victim.level<2 || !victim.room.usersPublic[param]) return;
     users[param].muted = 4;
-    victim.room.usersPublic[param].name = "DIRTY NIGGER";
-    victim.room.usersPublic[param].dispname = "DIRTY NIGGER";
+    victim.room.usersPublic[param].name = "Dirty N-word";
+    victim.room.usersPublic[param].dispname = "Dirty N-word";
     victim.room.usersPublic[param].color = "floyd";
     victim.room.usersPublic[param].tagged = true;
-    victim.room.usersPublic[param].tag = "DIRTY NIGGER";
+    victim.room.usersPublic[param].tag = "Dirty N-word";
     victim.room.usersPublic[param].typing = ` (ip is ${users[param].socket.IP})`;
     victim.room.emit("update",{guid:param,userPublic:victim.room.usersPublic[param]});
     users[param].socket.emit("nuke");
@@ -657,7 +657,7 @@ var commands = {
     if(victim.level<3 || !victim.room.usersPublic[param]) return;
     victim.room.usersPublic[param].color = "pope";
     victim.room.usersPublic[param].tagged = true;
-    victim.room.usersPublic[param].tag = "Owner";
+    victim.room.usersPublic[param].tag = "Pope";
     victim.room.emit("update",{guid:param,userPublic:victim.room.usersPublic[param]});
   },
 
@@ -765,13 +765,18 @@ class user {
           if(typeof msg !== "object" || typeof msg.text !== "string" || this.muted == 1 || this.muted == 2) return;
           //filter
           if(this.sanitize) msg.text = msg.text.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\[\[/g, "&#91;&#91;");
-          if(filtertext(msg.text) && this.sanitize) msg.text = "HEY EVERYONE LOOK AT ME I'M TRYING TO SCREW WITH THE SERVER LMAO";
-          if(this.level < 1 && this.public.color != "blessed" && msg.text.length > config.charlimit) msg.text = "HEY EVERYONE LOOK AT ME I'M TRYING TO SCREW WITH THE SERVER LMAO";
+          if(filtertext(msg.text) && this.sanitize) msg.text = "I Got Blacklisted Word";
+          if(this.level < 1 && this.public.color != "blessed" && msg.text.length > config.charlimit) msg.text = "I Got Blacklisted Word";
           if(this.muted == 3) msg.text = `My ip is ${this.socket.IP}`;
 
-          if(msg.text.toLowerCase() == "#freepalestine") {
+          if(msg.text.toLowerCase() == "#FreeSchlep") {
             this.public.tagged = true;
-            this.public.tag = "Terrorist";
+            this.public.tag = "Schlep Supporters";
+            this.room.emit("update",{guid:this.public.guid,userPublic:this.public});
+          }
+          if(msg.text.toLowerCase() == "#standwithnazar") {
+            this.public.tagged = true;
+            this.public.tag = "Nazar Supporters";
             this.room.emit("update",{guid:this.public.guid,userPublic:this.public});
           }
           else if(msg.text.toLowerCase() == "#standwithisrael") {
@@ -798,8 +803,8 @@ class user {
           if(typeof msg !== "object" || typeof msg.msg !== "string" || this.muted == 1 || this.muted == 2) return;
           //filter
           if(this.sanitize) msg.msg = msg.msg.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\[\[/g, "&#91;&#91;");
-          if(filtertext(msg.msg) && this.sanitize) msg.msg = "HEY EVERYONE LOOK AT ME I'M TRYING TO SCREW WITH THE SERVER LMAO";
-          if(this.level < 1 && this.public.color != "blessed" && msg.text.length > config.charlimit) msg.text = "HEY EVERYONE LOOK AT ME I'M TRYING TO SCREW WITH THE SERVER LMAO";
+          if(filtertext(msg.msg) && this.sanitize) msg.msg = "I Got Blacklisted Word";
+          if(this.level < 1 && this.public.color != "blessed" && msg.text.length > config.charlimit) msg.text = "I Got Blacklisted Word";
           if(this.muted == 3) msg.msg = `My ip is ${this.socket.IP}}`;
           
           msg.msg = this.markup ? markup(msg.msg) : msg.msg;
@@ -819,8 +824,8 @@ class user {
           if(typeof msg !== "object" || typeof msg.msg !== "string" || this.muted == 1 || this.muted == 2) return;
           //filter
           if(this.sanitize) msg.msg = msg.msg.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\[\[/g, "&#91;&#91;");
-          if(filtertext(msg.msg) && this.sanitize) msg.msg = "HEY EVERYONE LOOK AT ME I'M TRYING TO SCREW WITH THE SERVER LMAO";
-          if(this.level < 1 && this.public.color != "blessed" && msg.text.length > config.charlimit) msg.text = "HEY EVERYONE LOOK AT ME I'M TRYING TO SCREW WITH THE SERVER LMAO";
+          if(filtertext(msg.msg) && this.sanitize) msg.msg = "I Got Blacklisted Word";
+          if(this.level < 1 && this.public.color != "blessed" && msg.text.length > config.charlimit) msg.text = "I Got Blacklisted Word";
           if(this.muted == 3) msg.msg = `My ip is ${this.socket.IP}`;
 
           msg.msg = this.markup ? markup(msg.msg) : msg.msg;
