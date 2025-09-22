@@ -22,3 +22,9 @@ clippy
 genie
 merlin
 robby
+droyd
+voidmeme
+dirlewanger
+windows93
+satoko
+trump
