@@ -170,6 +170,12 @@ function loadBonzis(a) {
         { id: "bonziYellow", src: "./img/bonzi/yellow.png" },
         { id: "bonziTroll", src: "./img/bonzi/troll.png" },
         { id: "bonziRabbi", src: "./img/bonzi/rabbi.png" },
+        { id: "bonziDroyd", src: "./img/bonzi/droyd.png" },
+        { id: "bonziDirlewanger", src: "./img/bonzi/dirlewanger.png" },
+        { id: "bonziSatoko", src: "./img/bonzi/satoko.png" },
+        { id: "bonziTrump", src: "./img/bonzi/trump.png" },
+        { id: "bonziVoidmeme", src: "./img/bonzi/voidmeme.png" },
+        { id: "bonziWindows93", src: "./img/bonzi/windows93.png" },
 	{ id: "bonziDress", src: "./img/bonzi/dress.png" },
 	{ id: "peedy", src: "./img/bonzi/peedy.png" },
 	{ id: "clippy", src: "./img/bonzi/clippy.png" },
@@ -1653,13 +1659,13 @@ var _createClass = (function () {
                 ticks: 15
             }, {
                 type: "text",
-                text: "\"HAHAHAHA LOOK AT THIS IDIOT NAMED {NAME} TELLING DAD AND STOLEN JOKES!\" Fuck you. It isn't funny.",
-                say: "HAHAHAHA LOOK AT THIS IDIOT NAMED {NAME} TELLING DAD AND STOLEN JOKES! Fuck you. It isn't funny."
+                text: "\"Haha! Look at stupid {COLOR} Monkey Telling Jokes! Fuck you. It isn't funny.",
+                say: "Haha! Look at stupid {COLOR} Monkey Telling Jokes! Fuck you. It isn't funny."
             }, {
                 type: "idle"
             }, {
                 type: "text",
-                text: "But I'll do it anyway. Because you want me to."
+                text: "But I'll do it anyway. Because you want me to. I Hope you're now happys"
             }],
             [{
                 type: "text",
@@ -1825,7 +1831,7 @@ var _createClass = (function () {
                 text: "Laughter is the best medicine!"
             }, {
                 type: "text",
-                text: "Or not."
+                text: "Or not"
             }],
             [{
                 type: "text",
@@ -1847,7 +1853,7 @@ var _createClass = (function () {
             }],
             [{
                 type: "html",
-                text: "Hey, You Idiots! It's Time For A Fun Fact"
+                text: "hey dude, It's Time For A Fun Fact!"
             }]
         ],
 
@@ -2021,7 +2027,7 @@ $(document).ready(function () {
             (this.framerate = 1 / 15),
             (this.spriteSheets = {}),
             (this.prepSprites = function () {
-                for (var a = ["black", "blue", "brown", "green", "purple", "red", "pink", "pope", "king", "jabba", "seamus", "jew", "inverted", "dress", "orange", "floyd", "blessed", "ronnie", "allah", "white", "yellow", "troll", "rabbi", "god", "superomegagod", "fuckunesupporter", "dress", "peedy", "clippy", "genie", "merlin", "robby"], b = 0; b < a.length; b++) {
+                for (var a = ["black", "blue", "brown", "green", "purple", "red", "pink", "pope", "satoko", "windows93", "king", "jabba", "trump","seamus", "jew", "voidmeme", "droyd", "dirlewanger", "inverted", "dress", "orange", "floyd", "blessed", "ronnie", "allah", "white", "yellow", "troll", "rabbi", "god", "superomegagod", "fuckunesupporter", "dress", "peedy", "clippy", "genie", "merlin", "robby"], b = 0; b < a.length; b++) {
                     var c = a[b];  // Removed the comma here
                     var d;
                     if (c == 'peedy') {
