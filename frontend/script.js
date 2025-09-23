@@ -9,6 +9,9 @@ var emotes = [
     { name: "bow", action: [{ type: "anim", anim: "bow_fwd", ticks: 30 }, { type: "idle" }] },
     { name: "think", action: [{ type: "anim", anim: "think_fwd", ticks: 30 }, { type: "idle" }] },
     { name: "smile", action: [{ type: "anim", anim: "smile_fwd", ticks: 30 }, { type: "idle" }] },
+	{ name: "praise", action: [{ type: "anim", anim: "praise_fwd", ticks: 30 }, { type: "idle" }] },
+	{ name: "grin", action: [{ type: "anim", anim: "grin_fwd", ticks: 30 }, { type: "idle" }] },
+	{ name: "present", action: [{ type: "anim", anim: "present_fwd", ticks: 30 }, { type: "idle" }] },
 ];
 var bgs = [];
 var authlevel = 0;
