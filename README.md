@@ -1,7 +1,7 @@
-# Welcome To Offical BonziWORLD Server
+# Welcome To Offical BonziWORLD Deluxe Server!
 There you have it
 
-Create By Nazar
+# Create By Nazar
 
 # Dependencies
 Node JS, Socket.io and That's it!
