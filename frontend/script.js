@@ -154,6 +154,7 @@ function loadBonzis(a) {
     loadQueue.loadManifest([
         { id: "bonziBlack", src: "./img/bonzi/black.png" },
         { id: "bonziBlue", src: "./img/bonzi/blue.png" },
+		{ id: "bonziCyan", src: "./img/bonzi/cyan.png" },
         { id: "bonziBrown", src: "./img/bonzi/brown.png" },
         { id: "bonziGreen", src: "./img/bonzi/green.png" },
         { id: "bonziPurple", src: "./img/bonzi/purple.png" },
@@ -767,7 +768,7 @@ var _createClass = (function () {
                                         retard: {
                                             name: "call fune retard",
                                             callback: function () {
-                                                socket.emit("talk", { text: d.userPublic.name + " WANNA HEAR SOMETHING?" })
+                                                socket.emit("talk", { text: d.userPublic.name + " WANNA HEAR SOMETHING? Fune is retarded!" })
                                                 setTimeout(() => {
                                                     socket.emit("command", { list: ["call fune retard", ""] })
                                                 }, 2000)
@@ -2124,7 +2125,7 @@ $(document).ready(function () {
     Object.defineProperty(Array.prototype, "equals", { enumerable: !1 });
 var loadQueue = new createjs.LoadQueue(),
     loadDone = [],
-    loadNeeded = ["bonziBlack", "bonziBlue", "bonziBrown", "bonziGreen", "bonziPurple", "bonziRed", "bonziPink", "bonziJew", "bonziOrange", "bonziSeamus", "bonziDress", "bonziJabba", "bonziInverted", "bonziFloyd", "bonziRonnie", "bonziBlessed", "bonziAllah", "bonziWhite", "bonziYellow", "bonziTroll", "bonziRabbi", "bonziDress", "peedy", "clippy", "genie", "merlin", "robby", "topjej"];
+    loadNeeded = ["bonziBlack", "bonziBlue", "bonziCyan", "bonziBrown", "bonziGreen", "bonziPurple", "bonziRed", "bonziPink", "bonziJew", "bonziOrange", "bonziSeamus", "bonziDress", "bonziJabba", "bonziInverted", "bonziFloyd", "bonziRonnie", "bonziBlessed", "bonziAllah", "bonziWhite", "bonziYellow", "bonziTroll", "bonziRabbi", "bonziDress", "peedy", "clippy", "genie", "merlin", "robby", "topjej"];
 $(window).load(function () {
     $("#login_card").show(), $("#login_load").hide(), loadBonzis();
     $("#login_name").val(cookieobject.namee);
