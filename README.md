@@ -1,5 +1,5 @@
 # Welcome To Offical BonziWORLD Deluxe Server!
-There you have it
+BonziWORLD Deluxe open-source.
 
 # Create By Nazar
 
